@@ -3,7 +3,8 @@
   x - ustawimay APPID
   x - ustawiamy miasto 
 [x] wejscie na strone na podstawie URL
-[] transformacja JSON
-[] wyluskac temp z danych
-[] wyswietlenie danych (KONSOLA)
+[x] transformacja JSON
+[x] wyluskac temp z danych
+[x] wyswietlenie danych (KONSOLA)
+Ogładzenie kodziku
 
