@@ -5,7 +5,7 @@ class CurrentWeather
 {
   const ENDPOINT = 'http://api.openweathermap.org/data/2.5/weather';
   private $apiKey;
-  private $http
+  private $http;
   public function __construct($http, $apiKey)
   {
     $this->apiKey = $apiKey;
