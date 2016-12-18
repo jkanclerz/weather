@@ -14,19 +14,24 @@ class CurrentWeather
 
   public function getTemperature($city)
   {
-    $url = sprintf(
-      '%s?q=%s&APPID=%s&units=metric',
-      self::ENDPOINT,
-      $city,
-      $this->apiKey
-    );
-
+    $url = $this->buildUrl($city);
     $response = $this->http->request('GET', $url);
     $rawData = $response->getBody();
     $data = json_decode($rawData, true);
     $temp = $data['main']['temp'];
 
     return $temp; 
+  }
+
+  private function buildUrl($city)
+  {
+    $url = sprintf(
+      '%s?q=%s&APPID=%s&units=metric',
+      self::ENDPOINT,
+      $city,
+      $this->apiKey
+    );
+    return $url;
   }
 }
 
