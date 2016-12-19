@@ -5,7 +5,7 @@ use GuzzleHttp\Client;
 use Jkanclerz\Weather\CurrentWeather;
 
 $city = $argv[1];
-$apiKey = getenv('OPEN_WEATHER_API_KEY');;
+$apiKey = getenv('OPEN_WEATHER_API_KEY');
 $http = new Client();
 
 $weatherApi = new CurrentWeather($http, $apiKey);
